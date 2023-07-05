@@ -86,3 +86,47 @@ let x = 10;
 let y = 5;
 println!("{} + {}", x, y, x + y); // Erreur : argument positionnel inutilisé
 ```
+
+## Les types de données
+
+### Les nombres entiers
+
+En Rust, vous pouvez avoir des nombres entiers de différentes tailles et signes. Par exemple, vous pouvez avoir des nombres entiers signés de 8 bits (i8), de 16 bits (i16), de 32 bits (i32), de 64 bits (i64), et de 128 bits (i128). Les nombres entiers signés peuvent être positifs ou négatifs.
+
+Vous pouvez également avoir des nombres entiers non signés, qui ne peuvent être que positifs. Ces types sont indiqués par un u au lieu d'un i, comme u8, u16, u32, u64, et u128.
+
+```rust
+let x: i16 = 10;
+let y: u16 = 5;
+println!("{} - {} = {}", x, y, x - y as i16);
+```
+
+### Les nombres à virgule flottante
+
+Les nombres à virgule flottante en Rust peuvent être de deux types : f32 et f64. Ces types représentent des nombres à virgule flottante de 32 bits et de 64 bits respectivement. Par défaut, Rust utilise f64 car il offre plus de précision.
+
+```rust
+let x: f32 = 2.5;
+let y: f64 = 10.0;
+println!("{} - {} = {}", x, y, x - y as f32);
+```
+
+### Les booléens
+
+Les booléens en Rust sont représentés par le type bool. Ils peuvent avoir deux valeurs : true ou false.
+
+```rust
+let x: bool = true;
+println!("La valeur de x est {}", x);
+```
+
+### Les caractères
+
+```rust
+let x: char = 'z';
+println!("La valeur de x est {}", x);
+```
+
+```rust
+
+```
