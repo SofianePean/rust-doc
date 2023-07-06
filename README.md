@@ -173,6 +173,62 @@ if age >= 18 {
 }
 ```
 
+## Les boucles
+
+### Boucle avec continue
+
+Le mot-clé continue en Rust permet de sauter le reste de l'itération en cours et de passer directement à la prochaine itération. C'est utile lorsque vous voulez ignorer certaines valeurs dans votre boucle.
+
+```rust
+let mut x = 0;
+while x < 31 {
+    x += 1;
+    if x % 3 != 0 {
+        continue;
+    }
+    println!("x = {}", x);
+}
+```
+
+Dans cet exemple, la boucle while ignore les nombres qui ne sont pas des multiples de 3.
+
+### Boucle avec break
+
+Le mot-clé break en Rust permet de sortir de la boucle immédiatement, sans terminer l'itération en cours ou en commencer une nouvelle. C'est utile lorsque vous avez atteint la condition d'arrêt de votre boucle.
+
+```rust
+let mut x = 0;
+while x < 20 {
+    x += 1;
+    if x * x > 200 {
+        break;
+    }
+    println!("x = {}", x);
+}
+```
+
+Dans cet exemple, la boucle while s'arrête dès que le carré de x dépasse 200.
+
+### Boucle for
+
+La boucle for en Rust est utilisée pour itérer sur une séquence de valeurs. Elle est souvent utilisée avec des plages de valeurs, qui sont créées avec l'opérateur .. ou ..=.
+
+```rust
+for x in 0..10 {
+    println!("x = {}", x);
+}
+```
+
+Dans cet exemple, la boucle for itère sur les nombres de 0 à 9. Notez que la borne supérieure de la plage (10 dans cet exemple) n'est pas incluse. Si vous voulez inclure la borne supérieure, vous pouvez utiliser l'opérateur ..= à la place.
+
+```rust
+for x in 0..=10 {
+    println!("x = {}", x);
+}
+```
+
+Dans cet exemple, la boucle for itère sur les nombres de 0 à 10, y compris 10.
+
 ```rust
 
 ```
