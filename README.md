@@ -229,6 +229,52 @@ for x in 0..=10 {
 
 Dans cet exemple, la boucle for itère sur les nombres de 0 à 10, y compris 10.
 
+## Les tableaux (arrays)
+
+### Déclaration d'un tableau
+
+Pour déclarer un tableau en Rust, vous utilisez des crochets [] et séparez chaque élément par une virgule. Par exemple, voici comment vous pouvez déclarer un tableau de chaînes de caractères :
+
+```rust
+let x = ["10", "displays", "hello", "world"];
+```
+
+let x = ["10", "displays", "hello", "world"];
+
+### Accéder aux éléments d'un tableau
+
+Pour accéder à un élément d'un tableau, vous utilisez l'index de l'élément. Les indices en Rust commencent à 0, donc le premier élément a l'index 0, le deuxième élément a l'index 1, et ainsi de suite.
+
+```rust
+println!("{}", x[0]); // Affiche "10"
+println!("{}", x[1]); // Affiche "displays"
+println!("{}", x[2]); // Affiche "hello"
+println!("{}", x[3]); // Affiche "world"
+
+```
+
+### Modifier les éléments d'un tableau
+
+Pour modifier un élément d'un tableau, vous devez d'abord rendre le tableau mutable en utilisant le mot-clé mut. Ensuite, vous pouvez utiliser l'index de l'élément pour le modifier.
+
+```rust
+let mut x = ["10", "displays", "hello", "world"];
+x[1] = "shows";
+println!("{}", x[1]); // Affiche "shows"
+```
+
+Dans cet exemple, le deuxième élément du tableau x est modifié de "displays" à "shows".
+
+### Taille d'un tableau
+
+Pour obtenir la taille d'un tableau (c'est-à-dire le nombre d'éléments qu'il contient), vous pouvez utiliser la méthode len().
+
+```rust
+println!("{}", x.len()); // Affiche "4"
+```
+
+Dans cet exemple, x.len() renvoie 4 car le tableau x contient quatre éléments.
+
 ```rust
 
 ```
