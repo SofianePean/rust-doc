@@ -9,7 +9,7 @@ let mut foo = 10;
 foo = 20; // Ceci est autorisé car foo est mutable
 ```
 
-## Constantes
+### Constantes
 
 Les constantes en Rust sont déclarées avec le mot-clé `const` et ne peuvent pas être modifiées une fois déclarées. Contrairement aux variables, vous devez spécifier le type de la constante lors de sa déclaration.
 
@@ -18,7 +18,7 @@ const FOO_BAR: i32 = 10;
 println!("La valeur de FOO_BAR est {}", FOO_BAR);
 ```
 
-## Shadowing
+### Shadowing
 
 Le shadowing est une autre façon de réassigner une variable en Rust. Avec le shadowing, vous pouvez déclarer une nouvelle variable avec le même nom qu'une variable existante, ce qui "masque" la variable originale. Le shadowing est différent de la mutabilité en ce sens qu'il crée une nouvelle variable à chaque fois, ce qui signifie que le type de la variable peut changer.
 
@@ -28,7 +28,7 @@ let bar = bar + 1; // Ceci est autorisé et crée une nouvelle variable bar
 println!("La valeur de bar après shadowing est {}", bar);
 ```
 
-## Scope
+### Scope
 
 Le scope d'une variable se réfère à la partie du code où une variable est accessible. En Rust, le scope d'une variable est déterminé par le bloc de code dans lequel elle est déclarée. Une fois que vous sortez de ce bloc de code, la variable n'est plus accessible.
 
@@ -57,7 +57,7 @@ println!("{} + {} = {}", x, y, x + y);
 
 Dans cet exemple, les accolades {} sont remplacées par les valeurs de x, y, et x + y dans l'ordre.
 
-### Arguments positionnels
+## Arguments positionnels
 
 Vous pouvez également utiliser des arguments positionnels pour réutiliser les mêmes valeurs plusieurs fois ou pour les utiliser dans un ordre différent.
 
@@ -125,6 +125,52 @@ println!("La valeur de x est {}", x);
 ```rust
 let x: char = 'z';
 println!("La valeur de x est {}", x);
+```
+
+## Les conditions (if/else)
+
+## Utilisation de base
+
+La structure de base d'une condition en Rust est if suivi d'une expression qui renvoie un booléen, puis d'un bloc de code à exécuter si l'expression est vraie.
+
+```rust
+let x = 10;
+if x > 0 {
+    println!("Le nombre est positif");
+}
+```
+
+Dans cet exemple, si x est supérieur à 0, le programme affiche "Le nombre est positif".
+
+## Utilisation de else
+
+Vous pouvez également utiliser else pour spécifier un bloc de code à exécuter si l'expression de la condition if est fausse.
+
+```rust
+let x = -5;
+if x > 0 {
+    println!("Le nombre est positif");
+} else {
+    println!("Le nombre est négatif");
+}
+
+```
+
+Dans cet exemple, comme x n'est pas supérieur à 0, le programme affiche "Le nombre est négatif".
+
+## Utilisation de else if
+
+Si vous avez plusieurs conditions à vérifier, vous pouvez utiliser else if pour ajouter des conditions supplémentaires.
+
+```rust
+let age = 17;
+if age >= 18 {
+    println!("Vous êtes majeur");
+} else if age > 0 {
+    println!("Vous êtes mineur");
+} else {
+    println!("Age non valide");
+}
 ```
 
 ```rust
